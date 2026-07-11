@@ -38,7 +38,6 @@ while DNA_entered is None:
     if input_from_file:
         with open("DNA_input_file.txt", "r") as f:
             DNA = f.read().upper()
-
     if len(DNA) <3:
         print("Please enter DNA that is longer than 3 characters.")
         error = True
@@ -52,6 +51,8 @@ while DNA_entered is None:
             else:
                 errors_found += 1
 
+                #removed_character =+ character
+
         if len(valid_DNA) < 3:
             print("DNA became shorter than 3 characters after removing invalid characters.")
             error = True
@@ -61,10 +62,23 @@ while DNA_entered is None:
             DNA_entered = True
 
     elif not remove_errors:
+        if input_from_file:
+            invalid_characters = ""
+
         for num, character in enumerate(DNA, start=1):
             if character not in "ATCG":
-                print((character, "Is not valid DNA, it is character nr:", num))
-                error = True
+                if not input_from_file:
+                    print((character, "Is not valid DNA, it is character nr:", num))
+                    error = True
+                if input_from_file:
+                    invalid_characters += f"{character} Is not valid DNA, it is character nr: {num}"
+                    error = True
+
+        if input_from_file and invalid_characters != "":
+            file_path = "Invalid_characters.txt"
+            with open(file_path, "w") as errors_file:
+                errors_file.write(invalid_characters)
+                print("Invalid characters written to file: 'Invalid_characters.txt' ")
 
         if not error:
             DNA_entered = True
@@ -92,7 +106,13 @@ print(f"Total is: {len(DNA)}\n")
 #turn the DNA into RNA and printing it in the form of codons
 RNA = DNA.replace("T", "U")
 codons = [RNA[x:x+3] for x in range(0, len(RNA), 3)]
-print("codons:",codons)
+if not input_from_file:
+    print("codons:",codons)
+if input_from_file:
+    file_path = "codons.txt"
+    with open(file_path, "w") as codons_file:
+        codons_file.write(str(codons))
+        print("Codons written to file: 'codons.txt'")
 
 #turn the codons into amino acids
 from codons import codon_table_single, codon_table_short, codon_table_name
@@ -113,4 +133,10 @@ while not amino_acids:
     except ValueError:
         print("Please enter one of these: full/short/single")
 
-print("\namino_acids:",amino_acids)
+if not input_from_file:
+    print("\namino_acids:",amino_acids)
+if input_from_file:
+    file_path = "amino_acids.txt"
+    with open(file_path, "w") as amino_acids_file:
+        amino_acids_file.write(str(amino_acids))
+        print("Amino acids written to file: 'amino_acids.txt'")
