@@ -3,11 +3,18 @@ while input_from_file is None:
     try:
         input_from_file = input("Would you like to import DNA from a file? (Make sure to read the readme) (y/n): ").lower()
         if input_from_file in ["y", "yes"]:
+            try:
+                with open("DNA_input_file.txt", "r") as f:
+                    DNA = f.read().upper()
+            except FileNotFoundError:
+                print("DNA_input_file.txt' Was not found")
+                raise SystemExit
             print("Reading DNA from file.")
             input_from_file = True
         elif input_from_file in ["n", "no"]:
             input_from_file = False
         else:
+            input_from_file = None
             raise ValueError
     except ValueError:
         print("Please enter either 'y' or 'n' for yes or no.")
@@ -23,11 +30,12 @@ while remove_errors is None:
             print("Keeping invalid characters in DNA\n")
             remove_errors = False
         else:
+            remove_errors = None
             raise ValueError
     except ValueError:
         print("Please enter either 'y' or 'n' for yes or no.")
 
-#input for when invalid characters automatically get removed
+#input for the dna
 DNA_entered = None
 while DNA_entered is None:
     error = False
@@ -36,8 +44,13 @@ while DNA_entered is None:
         DNA = input("\nEnter DNA: ").upper()
 
     if input_from_file:
-        with open("DNA_input_file.txt", "r") as f:
-            DNA = f.read().upper()
+        try:
+            with open("DNA_input_file.txt", "r") as f:
+                DNA = f.read().upper()
+        except FileNotFoundError:
+            print("'DNA_input_file.txt' file not found, please try again and make sure to read the readme.")
+            raise SystemExit
+
     if len(DNA) <3:
         print("Please enter DNA that is longer than 3 characters.")
         error = True
@@ -51,20 +64,18 @@ while DNA_entered is None:
             else:
                 errors_found += 1
 
-                #removed_character =+ character
-
         if len(valid_DNA) < 3:
-            print("DNA became shorter than 3 characters after removing invalid characters.")
-            error = True
+            #make sure this does not print when the DNA was already shorter than 3
+            if not error:
+                print("DNA became shorter than 3 characters after removing invalid characters.")
+                error = True
+
         if not error:
             print(f"\n{errors_found} Invalid characters removed from DNA")
             DNA = valid_DNA
             DNA_entered = True
 
-    elif not remove_errors:
-        if input_from_file:
-            invalid_characters = ""
-
+        invalid_characters = ""
         for num, character in enumerate(DNA, start=1):
             if character not in "ATCG":
                 if not input_from_file:
@@ -80,16 +91,14 @@ while DNA_entered is None:
                 errors_file.write(invalid_characters)
                 print("Invalid characters written to file: 'Invalid_characters.txt' ")
 
-        if not error:
-            DNA_entered = True
-            # blank space so the output looks better
-            print("\n")
+    if not error:
+        DNA_entered = True
 
-        else:
-            print("Please enter valid DNA\n")
-            if input_from_file:
-                print("Invalid DNA entered from file. Please try again.")
-                raise SystemExit
+    if error:
+        print("Please enter valid DNA\n")
+        if input_from_file:
+            print("Invalid DNA entered from file. Please try again.")
+            raise SystemExit
 
 #remove any characters that won't form a codon
 remainder = len(DNA) % 3
@@ -103,7 +112,7 @@ for character in ["A", "T", "C", "G"]:
 print(f"Total is: {len(DNA)}\n")
 
 
-#turn the DNA into RNA and printing it in the form of codons
+#turn the DNA into RNA and returning it in the form of codons
 RNA = DNA.replace("T", "U")
 codons = [RNA[x:x+3] for x in range(0, len(RNA), 3)]
 if not input_from_file:
