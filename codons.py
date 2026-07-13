@@ -18,7 +18,7 @@
 [GUU, GUC, GUA, GUG] =           [Valine, Val, V]
 [GCU, GCC, GCA, GCG] =           [Alanine, Ala, A]
 [GAU, GAC] =                     [Aspartic acid, Asp, D]
-[GAA, GAG] =                     [Glutamic acid, GLU, E]
+[GAA, GAG] =                     [Glutamic acid, Glu, E]
 [GGU, GGC, GGA, GGG] =           [Glycine, Gly, G]
 '''
 
@@ -66,7 +66,7 @@ codon_table_short = {
 "GUU": "Val", "GUC": "Val", "GUA": "Val", "GUG": "Val",
 "GCU": "Ala", "GCC": "Ala", "GCA": "Ala", "GCG": "Ala",
 "GAU": "Asp", "GAC": "Asp",
-"GAA": "GLU", "GAG": "GLU",
+"GAA": "Glu", "GAG": "glu",
 "GGU": "Gly", "GGC": "Gly", "GGA": "Gly", "GGG": "Gly"
 }
 
