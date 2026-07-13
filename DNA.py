@@ -1,16 +1,18 @@
+#ask the user if they want to input DNA from a input() or a file
 input_from_file = None
 while input_from_file is None:
     try:
         input_from_file = input("Would you like to import DNA from a file? (Make sure to read the readme) (y/n): ").lower()
         if input_from_file in ["y", "yes"]:
+            #check if the file for the input exists
             try:
                 with open("DNA_input_file.txt", "r") as f:
-                    DNA = f.read().upper()
+                    print("Reading DNA from file.")
             except FileNotFoundError:
                 print("DNA_input_file.txt' Was not found")
                 raise SystemExit
-            print("Reading DNA from file.")
             input_from_file = True
+
         elif input_from_file in ["n", "no"]:
             input_from_file = False
         else:
@@ -19,6 +21,7 @@ while input_from_file is None:
     except ValueError:
         print("Please enter either 'y' or 'n' for yes or no.")
 
+#ask the user if they want to remove invalid characters from the DNA that is being read
 remove_errors = None
 while remove_errors is None:
     try:
@@ -42,8 +45,7 @@ while DNA_entered is None:
 
     if not input_from_file:
         DNA = input("\nEnter DNA: ").upper()
-
-    if input_from_file:
+    elif input_from_file:
         try:
             with open("DNA_input_file.txt", "r") as f:
                 DNA = f.read().upper()
@@ -65,7 +67,7 @@ while DNA_entered is None:
                 errors_found += 1
 
         if len(valid_DNA) < 3:
-            #make sure this does not print when the DNA was already shorter than 3
+            #if not errors makes sure that a DNA too short error can only print once
             if not error:
                 print("DNA became shorter than 3 characters after removing invalid characters.")
                 error = True
@@ -81,7 +83,7 @@ while DNA_entered is None:
                 if not input_from_file:
                     print((character, "Is not valid DNA, it is character nr:", num))
                     error = True
-                if input_from_file:
+                elif input_from_file:
                     invalid_characters += f"{character} Is not valid DNA, it is character nr: {num}"
                     error = True
 
