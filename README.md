@@ -9,3 +9,6 @@ If you have a short string of DNA it is very straight forward just run the progr
 
 If you have a longer string of DNA it is a bit more complicated but still straight forward, enter the DNA into "DNA_input_file.txt".
 When inputing the DNA from a file most input will also be written to files they will be written to the same folder as the program.
+
+The output files will be replaced once the program is ran again,
+make sure you save them somewhere if you want to keep them, make sure you don't move "codons.py" as it is needed for the program to run.
