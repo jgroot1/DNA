@@ -1,4 +1,4 @@
-def remove_invalid():
+def remove_invalid_verify_input():
 
     remove_errors = None
     while remove_errors is None:
