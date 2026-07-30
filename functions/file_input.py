@@ -2,7 +2,6 @@ def file_input():
 
     input_type_chosen = False
     while input_type_chosen is False:
-
         try:
             input_from_file = input("Would you like to import DNA from a file? (Make sure to read the readme) (y/n): ").lower()
             if input_from_file in ["y", "yes"]:
