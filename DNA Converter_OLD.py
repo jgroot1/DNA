@@ -126,7 +126,7 @@ if input_from_file:
         print("Codons written to file: 'codons.txt'")
 
 #turn the codons into amino acids
-from codons import codon_table_single, codon_table_short, codon_table_name
+from utils.codons import codon_table_single, codon_table_short, codon_table_name
 amino_acids = []
 while not amino_acids:
     try:
