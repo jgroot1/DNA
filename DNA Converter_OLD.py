@@ -6,7 +6,7 @@ while input_from_file is None:
         if input_from_file in ["y", "yes"]:
             #check if the file for the input exists
             try:
-                with open("DNA_input_file.txt", "r") as f:
+                with open("DNA_input_file.txt", "r"):
                     print("Reading DNA from file.")
             except FileNotFoundError:
                 print("DNA_input_file.txt' Was not found")
