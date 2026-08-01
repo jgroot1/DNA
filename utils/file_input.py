@@ -17,6 +17,7 @@ def file_input():
             else:
                 raise ValueError
         except ValueError:
-            print("Please enter either 'y' or 'n' for yes or no.")
+            print("Please enter either 'y' or 'n' for yes or no.\n")
+            input_from_file = None
 
     return input_from_file
