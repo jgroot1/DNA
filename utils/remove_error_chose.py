@@ -1,5 +1,4 @@
-def remove_invalid_verify_input():
-
+def remove_invalid():
     remove_errors = None
     while remove_errors is None:
         try:
