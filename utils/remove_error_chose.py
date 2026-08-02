@@ -7,7 +7,7 @@ def remove_invalid():
                 print("Automatically removing invalid characters from the DNA")
                 remove_errors = True
             elif remove_errors in ["n", "no"]:
-                print("Keeping invalid characters in DNA, This can cause errors!\n")
+                print("Keeping invalid characters in DNA, This can cause errors!")
                 remove_errors = False
             else:
                 remove_errors = None
