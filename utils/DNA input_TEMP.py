@@ -1,5 +1,5 @@
-DNA_entered = None
-while DNA_entered is None:
+DNA_entered = False
+while DNA_entered is False:
     error = False
 
     if not input_from_file:
