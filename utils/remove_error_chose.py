@@ -14,5 +14,4 @@ def invalid_removal_choice_function():
                 raise ValueError
         except ValueError:
             print("Please enter either 'y' or 'n' for yes or no.")
-
     return remove_errors
