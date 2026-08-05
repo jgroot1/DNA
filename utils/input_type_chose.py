@@ -1,4 +1,4 @@
-def file_input():
+def file_input_function():
     input_from_file = None
     while input_from_file is None:
         try:
