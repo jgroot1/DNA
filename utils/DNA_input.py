@@ -1,7 +1,7 @@
 def input_file_consol(input_from_file):
 
     DNA_entered = False
-    while DNA_entered is False:
+    while not DNA_entered:
         error = False
         if not input_from_file:
             DNA = input("\nEnter DNA: ").upper()
@@ -14,6 +14,10 @@ def input_file_consol(input_from_file):
                 raise SystemExit
         if len(DNA) < 3:
             print("Please enter DNA that is longer than 3 characters.")
+            if input_from_file is True:
+                print("Please check the file if everything is correct.")
+                raise SystemExit
+
         else:
             DNA_entered = True
 

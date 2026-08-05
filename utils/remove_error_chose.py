@@ -4,10 +4,10 @@ def remove_invalid():
         try:
             remove_errors = input("\nDo you want to automatically remove invalid characters from the DNA?: (y/n): ").lower()
             if remove_errors in ["y", "yes"]:
-                print("Automatically removing invalid characters from the DNA")
+                print("Automatically removing invalid characters from the DNA\n")
                 remove_errors = True
             elif remove_errors in ["n", "no"]:
-                print("Keeping invalid characters in DNA, This can cause errors!")
+                print("Keeping invalid characters in DNA, This can cause errors!\n")
                 remove_errors = False
             else:
                 remove_errors = None

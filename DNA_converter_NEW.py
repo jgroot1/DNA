@@ -9,6 +9,5 @@ remove_errors = remove_invalid()
 from utils.DNA_input import input_file_consol
 DNA = input_file_consol(input_from_file)
 
-if remove_errors:
-    from utils.error_removal import remove_errors
-    DNA = remove_errors(DNA)
+from utils.error_removal import remove_errors_function
+DNA = remove_errors_function(DNA, remove_errors, input_from_file)
