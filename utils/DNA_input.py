@@ -4,7 +4,7 @@ def input_file_consol_function(input_from_file):
     while not DNA_entered:
         error = False
         if not input_from_file:
-            DNA = input("\nEnter DNA: ").upper()
+            DNA = input("Enter DNA: ").upper()
         elif input_from_file:
             try:
                 with open("DNA_input_file.txt", "r") as f:
