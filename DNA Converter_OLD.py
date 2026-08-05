@@ -75,15 +75,16 @@ while DNA_entered is None:
             DNA = valid_DNA
             DNA_entered = True
 
-    invalid_characters = ""
-    for num, character in enumerate(DNA, start=1):
-        if character not in "ATCG":
-            if not input_from_file:
-                print((character, "Is not valid DNA, it is character nr:", num))
-                error = True
-            elif input_from_file:
-                invalid_characters += f"{character} Is not valid DNA, it is character nr: {num}"
-                error = True
+    elif not remove_errors:
+        invalid_characters = ""
+        for num, character in enumerate(DNA, start=1):
+            if character not in "ATCG":
+                if not input_from_file:
+                    print((character, "Is not valid DNA, it is character nr:", num))
+                    error = True
+                elif input_from_file:
+                    invalid_characters += f"{character} Is not valid DNA, it is character nr: {num}"
+                    error = True
 
     if input_from_file and invalid_characters != "":
         file_path = "Invalid_characters.txt"
