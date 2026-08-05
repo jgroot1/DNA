@@ -1,4 +1,4 @@
-def remove_invalid():
+def invalid_removal_choice_function():
     remove_errors = None
     while remove_errors is None:
         try:
