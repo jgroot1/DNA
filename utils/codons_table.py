@@ -22,7 +22,7 @@
 [GGU, GGC, GGA, GGG] =           [Glycine, Gly, G]
 '''
 
-codon_table_name = {
+codon_table_full = {
 "AUG": "start",
 "UAA": "stop", "UGA": "stop", "UAG": "stop",
 "UUU": "Phenylalanine", "UUC": "Phenylalanine",

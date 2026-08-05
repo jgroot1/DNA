@@ -106,7 +106,7 @@ if remainder != 0:
     print(DNA[len(DNA) - remainder], "Was removed form the end of the DNA, because it is too short to form a codon\n")
     DNA = DNA[:-remainder]
 
-#give information about the dna
+#gives information about the dna
 for character in ["A", "T", "C", "G"]:
     print(f"Amount of {character}: {DNA.count(character)}, Percentage: {round(DNA.count(character)/len(DNA) * 100 ,2)}%")
 print(f"Total is: {len(DNA)}\n")
@@ -124,19 +124,18 @@ if input_from_file:
         print("Codons written to file: 'codons.txt'")
 
 #turn the codons into amino acids
-from utils.codons import codon_table_single, codon_table_short, codon_table_name
+from utils.codons_table import codon_table_single, codon_table_short, codon_table_full
 amino_acids = []
 while not amino_acids:
     try:
         table_style = input("\nHow do you want the amino acid names: full/short/single: ").lower()
 
         if table_style == "full":
-            amino_acids = [codon_table_name.get(x) for x in codons]
+            amino_acids = [codon_table_full.get(x) for x in codons]
         elif table_style == "short":
             amino_acids = [codon_table_short.get(x) for x in codons]
         elif table_style == "single":
             amino_acids = [codon_table_single.get(x) for x in codons]
-
         else:
             raise ValueError
     except ValueError:
