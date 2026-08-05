@@ -2,19 +2,17 @@
 ## Information
 This program converts a DNA to RNA then into codons than turns those codons into amino acids and gives additional information about the DNA.
 
-The input and output can be through the program itself or through a file for longer DNA.
+The input and output can be through the program itself or through a file.
 
 ## How to use?
-If you have a short string of DNA it is very straight forward just run the program and it will tell you what to do.
+The program will tell you what you need to do.
+If you want to input from a file make sure the DNA is in "DNA_input_file.txt"
 
-If you have a longer string of DNA it is a bit more complicated but still straight forward, enter the DNA into "DNA_input_file.txt".
-When inputing the DNA from a file most input will also be written to files they will be written to the same folder as the program.
+The output files will be replaced once the program will run again, make sure you save them somewhere if you want to keep them
 
-The output files will be replaced once the program is ran again,
-make sure you save them somewhere if you want to keep them, make sure you don't change anything in the utils folder beacuse there are the files needed for the program to run.
+make sure you don't change anything in the utils folder because there are the files needed for the program to run.
 
-## Known isues
-from input from file if there are enters in the file it will have empty rows in it beacuse of the enters
+## Known issues
+from input from file if there are enters in the file it will have empty rows in it because of the enters
 
-When inputting from the consol when there are enters from being the DNA being copy pasted from DNA with enters the consol will do some wired bug,
-just use the file to input the DNA with remove errors if this happens
+If you put DNA with enters in it in the consol it will have some wired bug, just use input from file with remove errors if this happens
