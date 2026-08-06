@@ -18,10 +18,8 @@ DNA = remove_errors_function(DNA, remove_errors, input_from_file)
 from utils.DNA_info import DNA_info_function
 DNA = DNA_info_function(DNA)
 
-from utils.codons_amino_acids_converter import codons_to_amino_acids_function
-read_start_stop = codons_to_amino_acids_function()
-
 from utils.DNA_codon_converter import DNA_to_codons_function
 codons = DNA_to_codons_function(DNA, input_from_file)
 
-#if read_start_stop:
+from utils.codons_amino_acids_converter import codons_to_amino_acids_function
+read_start_stop = codons_to_amino_acids_function(codons, input_from_file)

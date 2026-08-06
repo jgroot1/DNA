@@ -17,7 +17,6 @@ def input_file_consol_function(input_from_file):
             if input_from_file is True:
                 print("Please check the file if everything is correct.")
                 raise SystemExit
-
         else:
             DNA_entered = True
 
