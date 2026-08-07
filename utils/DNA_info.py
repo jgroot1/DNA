@@ -3,9 +3,7 @@ def DNA_info_function(DNA):
     remainder = len(DNA) % 3
     if remainder != 0:
         print(DNA[len(DNA) - remainder],"Was removed form the end of the DNA, because it is too short to form a codon\n")
-        print(DNA)
         DNA = DNA[:-remainder]
-        print(DNA)
 
     # gives information about the dna
     for character in ["A", "T", "C", "G"]:
