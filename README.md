@@ -2,7 +2,7 @@
 ## Information
 This program converts a DNA to RNA then into codons than turns those codons into amino acids and gives additional information about the DNA.
 
-The input and output can be through the program itself or through a file.
+The input and output can be through the consol itself or through a file.
 
 ## How to use?
 The program will tell you what you need to do.
