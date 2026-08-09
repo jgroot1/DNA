@@ -1,4 +1,4 @@
-# DNA Converter
+# DNA Converter WIP
 ## Information
 This program converts a DNA to RNA then into codons than turns those codons into amino acids and gives additional information about the DNA.
 
