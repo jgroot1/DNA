@@ -18,6 +18,7 @@ DNA = remove_errors_function(DNA, remove_errors, input_from_file)
 from utils.DNA_info import DNA_info_function
 DNA = DNA_info_function(DNA)
 
+#let the user pick if they want the full codons to be read or only inbetween start-stop
 from utils.start_stop_reader_choice import start_stop_reader_choice
 read_start_stop = start_stop_reader_choice()
 
