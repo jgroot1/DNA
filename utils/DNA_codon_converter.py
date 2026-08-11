@@ -7,17 +7,18 @@ def DNA_to_codons_function(DNA,read_start_stop, input_from_file):
         read = False
         codons_read_between_start_stop = []
         for single_codons in codons:
-            if single_codons == "AUG":
+            if not read and single_codons == "AUG":
                 read = True
-                print(single_codons)
-
-            elif single_codons in ["UAA", "UGA", "UAG"]:
+            elif read and single_codons in ["UAA", "UGA", "UAG"]:
                 read = False
-                print(single_codons)
             else:
                 if read:
                     codons_read_between_start_stop.append(single_codons)
         codons = codons_read_between_start_stop
+
+    if len(codons) == 0:
+        print("Codon count became 0 after reading in between start and stop codons.")
+        raise SystemExit
 
     if input_from_file:
         file_path = "codons.txt"
