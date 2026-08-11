@@ -11,7 +11,7 @@
 [CAU, CAC] =                     [Histidine, His, H]
 [CAA, CAG] =                     [Glutamine, Gln, Q]
 [CGU, CGC, CGA, CGG, AGA, AGG] = [Arginine, Arg, R]
-[AUU, AUC AUA] =                 [Isoleucine, Ile, I]
+[AUU, AUC, AUA] =                [Isoleucine, Ile, I]
 [ACU, ACC, ACA, ACG] =           [Threonine, Thr, T]
 [AAU, AAC] =                     [Asparagine, Asn, N]
 [AAA, AAG] =                     [Lysine, Lys, K]
@@ -66,7 +66,7 @@ codon_table_short = {
 "GUU": "Val", "GUC": "Val", "GUA": "Val", "GUG": "Val",
 "GCU": "Ala", "GCC": "Ala", "GCA": "Ala", "GCG": "Ala",
 "GAU": "Asp", "GAC": "Asp",
-"GAA": "Glu", "GAG": "glu",
+"GAA": "Glu", "GAG": "Glu",
 "GGU": "Gly", "GGC": "Gly", "GGA": "Gly", "GGG": "Gly"
 }
 
