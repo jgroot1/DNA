@@ -1,5 +1,5 @@
-'''
-[AUG] =                          start
+"""
+[AUG] =                          start/Met, M
 [UAA, UGA, UAG] =                stop
 [UUU, UUC] =                     [Phenylalanine, Phe, F]
 [UUA, UUG, CUU, CUC, CUA, CUG] = [Leucine, Leu, L]
@@ -20,10 +20,10 @@
 [GAU, GAC] =                     [Aspartic acid, Asp, D]
 [GAA, GAG] =                     [Glutamic acid, Glu, E]
 [GGU, GGC, GGA, GGG] =           [Glycine, Gly, G]
-'''
+"""
 
 codon_table_full = {
-"AUG": "start",
+"AUG": "Methionine",
 "UAA": "stop", "UGA": "stop", "UAG": "stop",
 "UUU": "Phenylalanine", "UUC": "Phenylalanine",
 "UUA": "Leucine", "UUG": "Leucine", "CUU": "Leucine", "CUC": "Leucine", "CUA": "Leucine", "CUG": "Leucine",
@@ -47,7 +47,7 @@ codon_table_full = {
 }
 
 codon_table_short = {
-"AUG": "start",
+"AUG": "Met",
 "UAA": "stop", "UGA": "stop", "UAG": "stop",
 "UUU": "Phe", "UUC": "Phe",
 "UUA": "Leu", "UUG": "Leu", "CUU": "Leu", "CUC": "Leu", "CUA": "Leu", "CUG": "Leu",
@@ -71,7 +71,7 @@ codon_table_short = {
 }
 
 codon_table_single = {
-"AUG": "start",
+"AUG": "M",
 "UAA": "stop", "UGA": "stop", "UAG": "stop",
 "UUU": "F", "UUC": "F",
 "UUA": "L", "UUG": "L", "CUU": "L", "CUC": "L", "CUA": "L", "CUG": "L",
