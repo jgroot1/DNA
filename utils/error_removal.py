@@ -21,7 +21,7 @@ def remove_errors_function(DNA, remove_errors ,input_from_file):
             for num, character in enumerate(DNA, start=1):
                 if character not in "ATCG":
                     if not input_from_file:
-                        print((character, "Is not valid DNA, it is character nr:", num))
+                        print(f"'{character}' Is not valid DNA, it is character nr: {num}")
                         error = True
                     elif input_from_file:
                         invalid_characters += f"{character} Is not valid DNA, it is character nr: {num}\n"

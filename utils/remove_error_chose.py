@@ -7,11 +7,11 @@ def invalid_removal_choice_function():
                 print("Automatically removing invalid characters from the DNA\n")
                 remove_errors = True
             elif remove_errors in ["n", "no"]:
-                print("Keeping invalid characters in DNA, This can cause errors!\n")
+                print("Keeping invalid characters in DNA, This can cause errors and the program will close when that happens\n")
                 remove_errors = False
             else:
                 remove_errors = None
                 raise ValueError
         except ValueError:
-            print("Please enter either 'y' or 'n' for yes or no.")
+            print("Please enter either yes or no.")
     return remove_errors

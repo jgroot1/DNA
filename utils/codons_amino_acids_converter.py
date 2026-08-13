@@ -1,5 +1,4 @@
-def codons_to_amino_acids_function(codons, input_from_file):
-    from utils.codons_table import codon_table_single, codon_table_short, codon_table_full
+def codons_to_amino_acids_function(codons, input_from_file, codon_table_single, codon_table_short, codon_table_full):
     amino_acids = []
     while not amino_acids:
         try:
