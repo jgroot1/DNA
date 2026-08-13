@@ -2,7 +2,7 @@ def DNA_info_function(DNA):
     # remove any characters that won't form a codon
     remainder = len(DNA) % 3
     if remainder != 0:
-        print(DNA[len(DNA) - remainder],"Was removed form the end of the DNA, because it is too short to form a codon\n")
+        print(DNA[-remainder:], "Was removed form the end of the DNA, because it is too short to form a codon\n")
         DNA = DNA[:-remainder]
 
     # gives information about the dna

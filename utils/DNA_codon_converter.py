@@ -18,7 +18,7 @@ def DNA_to_codons_function(DNA,read_start_stop, input_from_file):
 
     if len(codons) == 0:
         print("Codon count became 0 after reading in between start and stop codons.")
-        raise SystemExit
+        raise SystemExit(1)
 
     if input_from_file:
         file_path = "codons.txt"

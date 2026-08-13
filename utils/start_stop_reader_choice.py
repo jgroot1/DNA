@@ -13,5 +13,5 @@ def start_stop_reader_choice():
                 read_start_stop = None
                 raise ValueError
         except ValueError:
-            print("Please enter either 'y' or 'n' for yes or no.")
+            print("Please enter either yes or no.")
     return read_start_stop
