@@ -3,7 +3,6 @@ def codons_to_amino_acids_function(codons, input_from_file, codon_table_single, 
     while not amino_acids:
         try:
             table_style = input("\nHow do you want the amino acid names: full/short/single: ").lower()
-
             if table_style == "full":
                 amino_acids = [codon_table_full.get(x) for x in codons]
             elif table_style == "short":
@@ -16,7 +15,7 @@ def codons_to_amino_acids_function(codons, input_from_file, codon_table_single, 
             print("Please enter one of these: full/short/single")
 
     if not input_from_file:
-        print("\namino_acids:",amino_acids)
+        print("\namino_acids:", amino_acids)
     if input_from_file:
         file_path = "amino_acids.txt"
         with open(file_path, "w") as amino_acids_file:
