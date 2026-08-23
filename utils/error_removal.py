@@ -1,4 +1,4 @@
-def remove_errors_function(DNA, remove_errors ,input_from_file):
+def remove_errors_function(DNA, remove_errors, input_from_file):
     error = False
     if remove_errors:
         errors_found = 0
@@ -17,21 +17,21 @@ def remove_errors_function(DNA, remove_errors ,input_from_file):
         DNA = valid_DNA
 
     elif not remove_errors:
-            invalid_characters = ""
-            for num, character in enumerate(DNA, start=1):
-                if character not in "ATCG":
-                    if not input_from_file:
-                        print(f"'{character}' Is not valid DNA, it is character nr: {num}")
-                        error = True
-                    elif input_from_file:
-                        invalid_characters += f"{character} Is not valid DNA, it is character nr: {num}\n"
-                        error = True
+        invalid_characters = ""
+        for num, character in enumerate(DNA, start=1):
+            if character not in "ATCG":
+                if not input_from_file:
+                    print(f"'{character}' Is not valid DNA, it is character nr: {num}")
+                    error = True
+                elif input_from_file:
+                    invalid_characters += f"{character} Is not valid DNA, it is character nr: {num}\n"
+                    error = True
 
-            if input_from_file and invalid_characters != "":
-                file_path = "Invalid_characters.txt"
-                with open(file_path, "w") as errors_file:
-                    errors_file.write(invalid_characters)
-                    print("Invalid characters written to file: 'Invalid_characters.txt' ")
+        if input_from_file and invalid_characters != "":
+            file_path = "Invalid_characters.txt"
+            with open(file_path, "w") as errors_file:
+                errors_file.write(invalid_characters)
+                print("Invalid characters written to file: 'Invalid_characters.txt' ")
 
     if error:
         print("Please enter valid DNA\n")
@@ -43,4 +43,3 @@ def remove_errors_function(DNA, remove_errors ,input_from_file):
             raise SystemExit
     else:
         return DNA
-

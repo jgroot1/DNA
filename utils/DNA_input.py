@@ -1,5 +1,4 @@
 def input_file_consol_function(input_from_file):
-
     DNA_entered = False
     while not DNA_entered:
         if not input_from_file:

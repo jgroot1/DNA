@@ -1,7 +1,6 @@
-def DNA_to_codons_function(DNA,read_start_stop, input_from_file):
-
+def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
     RNA = DNA.replace("T", "U")
-    codons = [RNA[x:x+3] for x in range(0, len(RNA), 3)]
+    codons = [RNA[x:x + 3] for x in range(0, len(RNA), 3)]
 
     if read_start_stop:
         read = False
