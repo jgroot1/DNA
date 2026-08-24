@@ -3,12 +3,14 @@ def codons_to_amino_acids_function(codons, input_from_file, codon_table_single, 
     while not amino_acids:
         try:
             table_style = input("\nHow do you want the amino acid names: full/short/single: ").lower()
-            if table_style == "full":
-                amino_acids = [codon_table_full.get(x) for x in codons]
-            elif table_style == "short":
-                amino_acids = [codon_table_short.get(x) for x in codons]
-            elif table_style == "single":
-                amino_acids = [codon_table_single.get(x) for x in codons]
+            if table_style in ["full", "short", "single"]:
+                for codon in codons:
+                    if table_style == "full":
+                        amino_acids = [codon_table_full.get(x) for x in codon]
+                    elif table_style == "short":
+                        amino_acids = [codon_table_short.get(x) for x in codon]
+                    elif table_style == "single":
+                        amino_acids = [codon_table_single.get(x) for x in codon]
             else:
                 raise ValueError
         except ValueError:
