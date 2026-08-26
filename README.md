@@ -12,6 +12,8 @@ The output files will be replaced once the program will run again, make sure you
 
 make sure you don't change anything in the utils folder because there are the files needed for the program to run.
 
+when only reading the DNA inbetween start/stop the DNA will only be read if there are start/stop codons, so at the end there will need to be a stop codon
+
 ## Known issues
 from input from file if there are enters in the file it will have empty rows in it because of the enters
 

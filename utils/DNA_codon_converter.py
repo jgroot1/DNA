@@ -8,7 +8,6 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
         codons_read_between_start_stop = []
         for single_codons in codons:
             if read and single_codons in ["UAA", "UGA", "UAG"]:
-                # print(codons_read_between_start_stop)
                 codon_list.append(codons_read_between_start_stop.copy())
                 codons_read_between_start_stop.clear()
                 read = False
@@ -16,6 +15,9 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
                 codons_read_between_start_stop.append(single_codons)
             if not read and single_codons == "AUG":
                 read = True
+
+        if len(codon_list) == 1:
+            codon_list = codon_list[0]
         codons = codon_list
 
     if len(codons) == 0:
