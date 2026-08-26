@@ -6,6 +6,6 @@ def among_acid_name_style():
             if table_style not in ["full", "short", "single"]:
                 raise ValueError
         except ValueError:
-                    print("Please enter one of these: full/short/single")
-                    table_style = None
+            print("Please enter one of these: full/short/single")
+            table_style = None
     return table_style

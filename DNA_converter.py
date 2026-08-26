@@ -1,11 +1,11 @@
 from utils.DNA_codon_converter import DNA_to_codons_function
 from utils.DNA_info import DNA_info_function
 from utils.DNA_input import input_file_consol_function
+from utils.amino_acid_name_style import among_acid_name_style
 from utils.codons_amino_acids_converter import codons_to_amino_acids_function
 from utils.codons_table import codon_table_single, codon_table_short, codon_table_full
 from utils.error_removal import remove_errors_function
 from utils.yes_no import choose
-from utils.amino_acid_name_style import among_acid_name_style
 
 # ask the user if they want to import their DNA from a file or the consol
 input_from_file = choose(
