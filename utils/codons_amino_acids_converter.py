@@ -7,11 +7,10 @@ def codons_to_amino_acids_function(codon, input_from_file, table_style, codon_ta
     while not amino_acids:
         if type(codon[0]) == list:
             for codon in codons:
-                amino_acids.append(amino_acid_table_style(codon, table_style, codon_table_full, codon_table_short,codon_table_single))
+                amino_acids.append(amino_acid_table_style(codon, table_style, codon_table_full, codon_table_short, codon_table_single))
 
         else:
             amino_acids = amino_acid_table_style(codon, table_style, codon_table_full, codon_table_short,codon_table_single)
-
 
     if not input_from_file:
         print("\namino_acids:", amino_acids)
