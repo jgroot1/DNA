@@ -42,3 +42,5 @@ table_style = among_acid_name_style()
 
 # turns the codons in amino acids
 amino_acids = codons_to_amino_acids_function(codons, input_from_file, table_style, codon_table_full, codon_table_short,codon_table_single)
+
+input("program finished successfully press any key to close the program\n")
