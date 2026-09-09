@@ -14,6 +14,7 @@ def input_file_consol_function(input_from_file):
             print("Please enter DNA that is longer than 3 characters.")
             if input_from_file is True:
                 print("The DNA entered from file is shorter than 3, Please check the file if everything is correct.")
+                input("press enter to close program")
                 raise SystemExit(1)
         else:
             DNA_entered = True

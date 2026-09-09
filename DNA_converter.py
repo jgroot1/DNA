@@ -15,9 +15,9 @@ input_from_file = choose(
 
 # ask the user if they want the program to automatically remove invalid characters from the DNA
 remove_errors = choose(
-    "\nDo you want to automatically remove invalid characters from the DNA?",
-    "Automatically removing invalid characters from the DNA\n",
-    "Keeping invalid characters in DNA, This can cause errors and the program will close when that happens\n")
+    "Do you want to automatically remove invalid characters from the DNA?",
+    "Automatically removing invalid characters from the DNA",
+    "Keeping invalid characters in DNA, This can cause errors and the program will close when that happens")
 
 # input for the DNA from the file or the consol
 DNA = input_file_consol_function(input_from_file)
@@ -30,9 +30,9 @@ DNA = DNA_info_function(DNA)
 
 # let the user pick if they want the full codons to be read or only inbetween start-stop
 read_start_stop = choose(
-    "\nDo you want the codons to be read between the start/stop codons",
-    "Reading DNA between start/stop\n",
-    "Keeping full DNA\n")
+    "Do you want the codons to be read between the start/stop codons",
+    "Reading DNA between start/stop",
+    "Keeping full DNA")
 
 # turns the DNA into codons
 codons = DNA_to_codons_function(DNA, read_start_stop, input_from_file)
@@ -43,4 +43,4 @@ table_style = among_acid_name_style()
 # turns the codons in amino acids
 amino_acids = codons_to_amino_acids_function(codons, input_from_file, table_style, codon_table_full, codon_table_short,codon_table_single)
 
-input("program finished successfully press any key to close the program\n")
+input("program finished successfully press enter to close the program\n")

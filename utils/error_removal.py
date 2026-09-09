@@ -37,9 +37,10 @@ def remove_errors_function(DNA, remove_errors, input_from_file):
         print("Please enter valid DNA\n")
         if input_from_file:
             print("Invalid DNA entered from file. Please try again.")
-            raise SystemExit
         else:
             print("Invalid DNA entered from consol. Please try again.")
-            raise SystemExit
+        input("press enter to close program")
+        raise SystemExit
+
     else:
         return DNA

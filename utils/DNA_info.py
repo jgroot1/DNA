@@ -8,5 +8,6 @@ def DNA_info_function(DNA):
     # gives information about the dna
     for character in ["A", "T", "C", "G"]:
         print(f"Amount of {character}: {DNA.count(character)}, Percentage: {round(DNA.count(character) / len(DNA) * 100, 2)}%")
-    print(f"Total is: {len(DNA)}")
+    print(f"Total is: {len(DNA)}\n")
+
     return DNA
