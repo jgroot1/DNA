@@ -8,7 +8,6 @@ from utils.error_removal import remove_errors_function
 from utils.yes_no import choose
 
 
-
 def main():
     # ask the user if they want to import their DNA from a file or the console
     input_from_file = choose(
