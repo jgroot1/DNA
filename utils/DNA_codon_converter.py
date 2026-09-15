@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
     RNA = DNA.replace("T", "U")
     codons = [RNA[x:x + 3] for x in range(0, len(RNA), 3)]
@@ -25,13 +27,16 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
         input("press enter to close program")
         raise SystemExit(1)
 
-    if input_from_file:
-        file_path = "codons.txt"
-        with open(file_path, "w") as codons_file:
-            codons_file.write(str(codons))
-            print("Codons written to file: 'codons.txt'")
-            return codons
 
-    else:
+    if not input_from_file:
         print("codons:", codons)
-        return codons
+
+    if input_from_file:
+        program_folder = Path(__name__).parent
+        output_folder = program_folder / "output"
+        output_folder.mkdir(exist_ok=True)
+
+        with open(output_folder / "codons.txt", "w") as f:
+            f.write(str(codons))
+
+    return codons
