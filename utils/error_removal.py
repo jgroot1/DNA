@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def remove_errors_function(DNA, remove_errors, input_from_file):
     error = False
     if remove_errors:
@@ -28,10 +30,13 @@ def remove_errors_function(DNA, remove_errors, input_from_file):
                     error = True
 
         if input_from_file and invalid_characters != "":
-            file_path = "Invalid_characters.txt"
-            with open(file_path, "w") as errors_file:
-                errors_file.write(invalid_characters)
-                print("Invalid characters written to file: 'Invalid_characters.txt' ")
+            program_folder = Path(__name__).parent
+            output_folder = program_folder / "output"
+            output_folder.mkdir(exist_ok=True)
+
+            with open(output_folder / "Invalid_characters.txt", "w") as f:
+                f.write(str(invalid_characters))
+            
 
     if error:
         print("Please enter valid DNA\n")

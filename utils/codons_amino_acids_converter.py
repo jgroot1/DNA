@@ -1,4 +1,6 @@
+from pathlib import Path
 from utils.amino_acid_table_styles import amino_acid_table_style
+
 def codons_to_amino_acids_function(codon, input_from_file, table_style, codon_table_full, codon_table_short,codon_table_single):
 
     amino_acids = []
@@ -14,9 +16,13 @@ def codons_to_amino_acids_function(codon, input_from_file, table_style, codon_ta
 
     if not input_from_file:
         print("\namino_acids:", amino_acids)
+
     if input_from_file:
-        file_path = "amino_acids.txt"
-        with open(file_path, "w") as amino_acids_file:
-            amino_acids_file.write(str(amino_acids))
-            print("Amino acids written to file: 'amino_acids.txt'")
+        program_folder = Path(__name__).parent
+        output_folder = program_folder / "output"
+        output_folder.mkdir(exist_ok=True)
+
+        with open(output_folder / "amino_acids.txt", "w") as f:
+            f.write(str(amino_acids))
+
     return amino_acids
