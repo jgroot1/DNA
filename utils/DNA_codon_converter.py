@@ -1,6 +1,7 @@
 from pathlib import Path
 
 def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
+    # the RNA is not actually RNA but the opposite so A -> U and G -> C and reversed, if looked at it as actually RNA
     RNA = DNA.replace("T", "U")
     codons = [RNA[x:x + 3] for x in range(0, len(RNA), 3)]
 
@@ -26,7 +27,6 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
         print("Codon count became 0 after reading in between start and stop codons.")
         input("press enter to close program")
         raise SystemExit(1)
-
 
     if not input_from_file:
         print("codons:", codons)

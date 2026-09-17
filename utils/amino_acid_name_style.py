@@ -8,4 +8,5 @@ def among_acid_name_style():
         except ValueError:
             print("Please enter one of these: full/short/single")
             table_style = None
+    print(f"Outputting amino acids into the {table_style} name.")
     return table_style

@@ -45,7 +45,7 @@ def main():
     # turns the codons in amino acids
     amino_acids = codons_to_amino_acids_function(codons, input_from_file, table_style, codon_table_full, codon_table_short, codon_table_single)
 
-    input("program finished successfully press enter to close the program\n")
+    input("\nprogram finished successfully press enter to close the program")
 
 
 if __name__ == "__main__":
