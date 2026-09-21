@@ -1,4 +1,5 @@
-def amino_acid_table_style(codons, table_style, codon_table_full, codon_table_short, codon_table_single):
+from utils.codons_table import *
+def amino_acid_table_style(codons, table_style):
     amino_acids = []
     if table_style == "full":
         amino_acids = [codon_table_full.get(single_codon) for single_codon in codons]
