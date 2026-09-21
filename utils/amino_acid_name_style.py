@@ -1,4 +1,4 @@
-def among_acid_name_style():
+def amino_acid_name_style():
     table_style = None
     while table_style is None:
         try:

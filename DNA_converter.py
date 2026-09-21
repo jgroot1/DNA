@@ -1,12 +1,10 @@
-from utils.DNA_codon_converter import DNA_to_codons_function
-from utils.DNA_info import DNA_info_function
-from utils.DNA_input import input_file_consol_function
-from utils.amino_acid_name_style import among_acid_name_style
-from utils.codons_amino_acids_converter import codons_to_amino_acids_function
-from utils.codons_table import codon_table_single, codon_table_short, codon_table_full
-from utils.error_removal import remove_errors_function
-from utils.yes_no import choose
-
+from utils.DNA_codon_converter import *
+from utils.DNA_info import *
+from utils.DNA_input import *
+from utils.amino_acid_name_style import *
+from utils.codons_amino_acids_converter import *
+from utils.error_removal import *
+from utils.yes_no import *
 
 def main():
     # ask the user if they want to import their DNA from a file or the console
@@ -40,10 +38,10 @@ def main():
     codons = DNA_to_codons_function(DNA, read_start_stop, input_from_file)
 
     # ask how the amino acids should be displayed
-    table_style = among_acid_name_style()
+    table_style = amino_acid_name_style()
 
     # turns the codons in amino acids
-    amino_acids = codons_to_amino_acids_function(codons, input_from_file, table_style, codon_table_full, codon_table_short, codon_table_single)
+    amino_acids = codons_to_amino_acids_function(codons, input_from_file, table_style)
 
     input("\nprogram finished successfully press enter to close the program")
 

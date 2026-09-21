@@ -36,7 +36,6 @@ def remove_errors_function(DNA, remove_errors, input_from_file):
 
             with open(output_folder / "Invalid_characters.txt", "w") as f:
                 f.write(str(invalid_characters))
-            
 
     if error:
         print("Please enter valid DNA\n")

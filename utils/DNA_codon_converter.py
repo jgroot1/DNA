@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from utils.cleaner import *
+
 def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
     # the RNA is not actually RNA but the opposite so A -> U and G -> C and reversed, if looked at it as actually RNA
     RNA = DNA.replace("T", "U")
@@ -28,8 +30,10 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
         input("press enter to close program")
         raise SystemExit(1)
 
+    clean_codons = clean(codons)
+
     if not input_from_file:
-        print("codons:", codons)
+        print("codons:", clean_codons)
 
     if input_from_file:
         program_folder = Path(__name__).parent
@@ -37,6 +41,6 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
         output_folder.mkdir(exist_ok=True)
 
         with open(output_folder / "codons.txt", "w") as f:
-            f.write(str(codons))
+            f.write(clean_codons)
 
     return codons
