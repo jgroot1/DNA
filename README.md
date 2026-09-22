@@ -1,6 +1,6 @@
 # DNA Converter
 ## Information
-This program converts a DNA to RNA then into codons than turns those codons into amino acids and gives additional information about the DNA.
+This program converts a DNA string to codons than turns those codons into amino acids and gives additional information about the DNA.
 
 The input and output can be through the console itself or through a file.
 
@@ -8,15 +8,14 @@ The input and output can be through the console itself or through a file.
 The program will tell you what you need to do.
 If you want to input from a file make sure the DNA is in "DNA_input_file.txt"
 
-When using input from fill every output will be in the output folder
+When using input from file every output will be in the output folder
 
 The output files will be replaced once the program will run again, make sure you save them somewhere if you want to keep them
 
-make sure you don't change anything in the utils folder because there are the files needed for the program to run.
+make sure you don't change anything in the utils folder because there are the files needed for the program to run. and keep all the files in the same folder 
 
 when only reading the DNA inbetween start/stop the DNA will only be read if there are start/stop codons, so at the end there will need to be a stop codon
 
 ## Known issues
-from input from file if there are enters in the file it will have empty rows in it because of the enters
 
 If you put DNA with enters in it in the consol it will have some wired bug, just use input from file with remove errors if this happens
