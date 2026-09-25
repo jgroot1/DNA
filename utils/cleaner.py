@@ -5,6 +5,5 @@ def clean(to_clean):
     elif type(to_clean[0]) == list:
         cleaned = ""
         for item in to_clean:
-            cleaned += "\n"
-            cleaned += " ".join(item)
+            cleaned += "\n ".join(item)
     return cleaned
