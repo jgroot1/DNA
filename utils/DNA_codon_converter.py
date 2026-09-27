@@ -4,6 +4,7 @@ from utils.cleaner import *
 
 # converts the DNA into codons which can be read inbetween start and stop
 def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
+
     # converts the DNA into codons
     # the RNA is not actually RNA but the opposite so A -> U and G -> C and reversed, if looked at it as actually RNA
     RNA = DNA.replace("T", "U")

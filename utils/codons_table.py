@@ -22,7 +22,9 @@
 [GGU, GGC, GGA, GGG] =           [Glycine, Gly, G]
 """
 
-full_amino_acid_list = ["Methionine", "stop", "Phenylalanine", "Leucine", "Serine", "Tyrosine", "Cysteine", "Tryptophan", "Proline", "Histidine", "Glutamine", "Arginine", "Isoleucine", "Threonine", "Asparagine", "Lysine", "Valine", "Alanine", "Aspartic acid", "Glutamic acid", "Glycine"]
+full_amino_acid_list = ["Methionine", "stop", "Phenylalanine", "Leucine", "Serine", "Tyrosine", "Cysteine",
+                        "Tryptophan", "Proline", "Histidine", "Glutamine", "Arginine", "Isoleucine", "Threonine",
+                        "Asparagine", "Lysine", "Valine", "Alanine", "Aspartic acid", "Glutamic acid", "Glycine"]
 
 codon_table_full = {
     "AUG": "Methionine",

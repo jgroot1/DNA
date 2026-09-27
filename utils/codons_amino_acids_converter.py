@@ -5,7 +5,6 @@ from utils.cleaner import *
 
 # converts the codons into amino acids
 def codons_to_amino_acids_function(codon, input_from_file, table_style):
-
     amino_acids, amino_acid_full_name = [], []
 
     # convert the codons and list of codons if the codons are being read between start stop into amino acids
@@ -26,7 +25,7 @@ def codons_to_amino_acids_function(codon, input_from_file, table_style):
     clean_amino_acids = clean(amino_acids)
 
     if not input_from_file:
-        print("\namino acids:", clean_amino_acids,"\n")
+        print("\namino acids:", clean_amino_acids, "\n")
 
     # creates and writes the amino acids to amino_acids.txt
     if input_from_file:
