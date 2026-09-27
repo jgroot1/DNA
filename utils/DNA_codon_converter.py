@@ -2,15 +2,17 @@ from pathlib import Path
 
 from utils.cleaner import *
 
+# converts the DNA into codons which can be read inbetween start and stop
 def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
+    # converts the DNA into codons
     # the RNA is not actually RNA but the opposite so A -> U and G -> C and reversed, if looked at it as actually RNA
     RNA = DNA.replace("T", "U")
     codons = [RNA[x:x + 3] for x in range(0, len(RNA), 3)]
 
+    # reads the codons inbetween start and stop codons
     if read_start_stop:
         read = False
-        codon_list = []
-        codons_read_between_start_stop = []
+        codon_list, codons_read_between_start_stop = [], []
         for single_codons in codons:
             if read and single_codons in ["UAA", "UGA", "UAG"]:
                 codon_list.append(codons_read_between_start_stop.copy())
@@ -21,6 +23,7 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
             if not read and single_codons == "AUG":
                 read = True
 
+        # if there is only 1 start/stop the codons will not be in a list of a list
         if len(codon_list) == 1:
             codon_list = codon_list[0]
         codons = codon_list
@@ -30,6 +33,7 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
         input("press enter to close program")
         raise SystemExit(1)
 
+    # outputs the codons in an easy-to-read way
     clean_codons = clean(codons)
 
     if not input_from_file:

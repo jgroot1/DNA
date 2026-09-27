@@ -1,3 +1,4 @@
+# used to make the output of the codons and amino acids look better
 def clean(to_clean):
     if type(to_clean[0]) == str:
         cleaned = " ".join(to_clean)

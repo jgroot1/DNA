@@ -1,8 +1,13 @@
+# used for the input of the DNA
 def input_file_consol_function(input_from_file):
     DNA_entered = False
+
+    # used when DNA is entered from the console
     while not DNA_entered:
         if not input_from_file:
             DNA = input("Enter DNA: ").upper()
+
+        # used when DNA is entered from the DNA_input_file
         elif input_from_file:
             try:
                 with open("DNA_input_file.txt", "r") as f:
@@ -10,12 +15,15 @@ def input_file_consol_function(input_from_file):
             except FileNotFoundError:
                 print("'DNA_input_file.txt' file not found, please try again and make sure to read the readme.")
                 raise SystemExit(1)
+
+        # makes sure the DNA is longer than 3 characters so codons can be formed
         if len(DNA) < 3:
             print("Please enter DNA that is longer than 3 characters.\n")
             if input_from_file is True:
                 print("The DNA entered from file is shorter than 3, Please check the file if everything is correct.")
                 input("press enter to close program")
                 raise SystemExit(1)
+
         else:
             DNA_entered = True
     return DNA

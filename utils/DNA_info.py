@@ -1,3 +1,4 @@
+#gives info about the DNA
 def DNA_info_function(DNA):
     # remove any characters that won't form a codon
     remainder = len(DNA) % 3

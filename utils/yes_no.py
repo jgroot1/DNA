@@ -1,3 +1,4 @@
+# used when there is a yes/no prompt
 def choose(prompt, positive, negative):
     picked = None
     while picked is None:
