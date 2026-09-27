@@ -38,7 +38,7 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
     clean_codons = clean(codons)
 
     if not input_from_file:
-        print("codons:", clean_codons)
+        print(f"codons:\n{clean_codons}")
 
     if input_from_file:
         program_folder = Path(__name__).parent

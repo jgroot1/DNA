@@ -26,7 +26,7 @@ def amino_acids_info(amino_acids):
 
         # print the info for every single protein
         count = 0
-        print("lose amino acids information:")
+        print("protein information:\n")
         for amino_acid in amino_acids:
             count += 1
             print("protein:", count)
