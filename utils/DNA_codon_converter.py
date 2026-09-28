@@ -16,8 +16,8 @@ def DNA_to_codons_function(DNA, read_start_stop, input_from_file):
         codon_list, codons_read_between_start_stop = [], []
         for single_codons in codons:
             if read and single_codons in ["UAA", "UGA", "UAG"]:
-                codon_list.append(codons_read_between_start_stop.copy())
-                codons_read_between_start_stop.clear()
+                codon_list.append(codons_read_between_start_stop)
+                codons_read_between_start_stop = []
                 read = False
             if read:
                 codons_read_between_start_stop.append(single_codons)
