@@ -26,6 +26,32 @@ full_amino_acid_list = ["Methionine", "stop", "Phenylalanine", "Leucine", "Serin
                         "Tryptophan", "Proline", "Histidine", "Glutamine", "Arginine", "Isoleucine", "Threonine",
                         "Asparagine", "Lysine", "Valine", "Alanine", "Aspartic acid", "Glutamic acid", "Glycine"]
 
+"""
+ C2, H4, N1, O2
+amino_acid_atoom_count = {
+    "Methionine",
+    "stop",
+    "Phenylalanine",
+    "Leucine",
+    "Serine",
+    "Tyrosine",
+    "Cysteine",
+    "Tryptophan",
+    "Proline",
+    "Histidine",
+    "Glutamine",
+    "Arginine",
+    "Isoleucine",
+    "Threonine",
+    "Asparagine",
+    "Lysine",
+    "Valine", "Alanine",
+    "Aspartic acid",
+    "Glutamic acid",
+    "Glycine"
+}
+"""
+
 codon_table_full = {
     "AUG": "Methionine",
     "UAA": "stop", "UGA": "stop", "UAG": "stop",
