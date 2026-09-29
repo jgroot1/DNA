@@ -2,10 +2,11 @@ from utils.DNA_codon_converter import *
 from utils.DNA_info import *
 from utils.DNA_input import *
 from utils.amino_acid_name_style import *
+from utils.amino_acids_info import *
 from utils.codons_amino_acids_converter import *
 from utils.error_removal import *
 from utils.yes_no import *
-from utils.amino_acids_info import *
+
 
 def main():
     # ask the user if they want to import their DNA from a file or the console
@@ -48,6 +49,7 @@ def main():
     amino_acids_info(amino_acid_full_name)
 
     input("program finished successfully press enter to close the program")
+
 
 if __name__ == "__main__":
     main()
