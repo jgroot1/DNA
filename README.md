@@ -1,4 +1,4 @@
-# DNA Converter
+# DNA Analyzer
 ## Information
 This program converts a DNA string to codons than turns those codons into amino acids and gives additional information about the DNA.
 
