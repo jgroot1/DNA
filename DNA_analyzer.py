@@ -49,6 +49,5 @@ def main():
 
     input("program finished successfully press enter to close the program")
 
-
 if __name__ == "__main__":
     main()
