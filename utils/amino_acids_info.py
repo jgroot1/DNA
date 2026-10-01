@@ -1,4 +1,4 @@
-from utils.codons_table import *
+from utils.codon_amino_acid_tables import *
 
 # gives information about the amino acids
 def amino_acids_info(amino_acids):
@@ -12,7 +12,7 @@ def amino_acids_info(amino_acids):
         print(f"Total is: {len(full_amino_acids)}\n")
 
 
-#    def atoom_info(full_amino_acids):
+#    def atom_info(full_amino_acids):
 #        for single_amino_acid in full_amino_acids:
 
     # used when the amino acids are in a single list

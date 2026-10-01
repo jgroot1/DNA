@@ -1,4 +1,4 @@
-from utils.codons_table import *
+from utils.codon_amino_acid_tables import *
 
 # convert the codons into the chosen table style
 def amino_acid_table_style(codons, table_style):

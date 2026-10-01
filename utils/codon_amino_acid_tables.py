@@ -1,5 +1,5 @@
 """
-[AUG] =                          start/Met, M
+[AUG] =                          start/Methionine, Met, M
 [UAA, UGA, UAG] =                stop
 [UUU, UUC] =                     [Phenylalanine, Phe, F]
 [UUA, UUG, CUU, CUC, CUA, CUG] = [Leucine, Leu, L]
@@ -26,31 +26,34 @@ full_amino_acid_list = ["Methionine", "stop", "Phenylalanine", "Leucine", "Serin
                         "Tryptophan", "Proline", "Histidine", "Glutamine", "Arginine", "Isoleucine", "Threonine",
                         "Asparagine", "Lysine", "Valine", "Alanine", "Aspartic acid", "Glutamic acid", "Glycine"]
 
-"""
- C2, H4, N1, O2
-amino_acid_atoom_count = {
-    "Methionine",
-    "stop",
-    "Phenylalanine",
-    "Leucine",
-    "Serine",
-    "Tyrosine",
-    "Cysteine",
-    "Tryptophan",
-    "Proline",
-    "Histidine",
-    "Glutamine",
-    "Arginine",
-    "Isoleucine",
-    "Threonine",
-    "Asparagine",
-    "Lysine",
-    "Valine", "Alanine",
-    "Aspartic acid",
-    "Glutamic acid",
-    "Glycine"
+
+ # every has C2, H4, N1, O2 S0
+ # format is CHNOS
+ 
+amino_acid_atom_count = {
+    "Methionine" :    [5 ,11, 1, 2, 1],
+    "stop" :          [0 ,0, 0, 0, 0],
+    "Phenylalanine" : [9 ,11, 1, 2, 0],
+    "Leucine" :       [6 ,13, 1, 2, 0],
+    "Serine" :        [3 ,7, 1, 3, 0],
+    "Tyrosine" :      [9 ,11, 1, 3, 0],
+    "Cysteine" :      [2 ,4, 1, 2, 0],
+    "Tryptophan" :    [2 ,4, 1, 2, 0],
+    "Proline" :       [2 ,4, 1, 2, 0],
+    "Histidine" :     [2 ,4, 1, 2, 0],
+    "Glutamine" :     [2 ,4, 1, 2, 0],
+    "Arginine" :      [2 ,4, 1, 2, 0],
+    "Isoleucine" :    [2 ,4, 1, 2, 0],
+    "Threonine" :     [2 ,4, 1, 2, 0],
+    "Asparagine" :    [2 ,4, 1, 2, 0],
+    "Lysine" :        [2 ,4, 1, 2, 0],
+    "Valine" :        [2 ,4, 1, 2, 0],
+    "Alanine" :       [2 ,4, 1, 2, 0],
+    "Aspartic acid" : [2 ,4, 1, 2, 0],
+    "Glutamic acid" : [2 ,4, 1, 2, 0],
+    "Glycine" :       [2 ,4, 1, 2, 0],
 }
-"""
+
 
 codon_table_full = {
     "AUG": "Methionine",
