@@ -11,9 +11,11 @@ def amino_acids_info(amino_acids):
                 print(f"Amount of {single_amino_acid}: {full_amino_acids.count(single_amino_acid)}, Percentage: {round(full_amino_acids.count(single_amino_acid) / len(full_amino_acids) * 100, 2)}%")
         print(f"Total is: {len(full_amino_acids)}\n")
 
+    # function that gives info about the amout of atoms
+    # def atom_info(full_amino_acids):
+       # for single_amino_acid in full_amino_acids:
 
-#    def atom_info(full_amino_acids):
-#        for single_amino_acid in full_amino_acids:
+            
 
     # used when the amino acids are in a single list
     if type(amino_acids[0]) == str:

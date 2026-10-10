@@ -29,7 +29,7 @@ full_amino_acid_list = ["Methionine", "stop", "Phenylalanine", "Leucine", "Serin
 
  # every has C2, H4, N1, O2 S0
  # format is CHNOS
- 
+
 amino_acid_atom_count = {
     "Methionine" :    [5, 11, 1, 2, 1],
     "stop" :          [0, 0, 0, 0, 0],
